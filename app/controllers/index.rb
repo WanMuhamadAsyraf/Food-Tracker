@@ -22,9 +22,6 @@ post '/add_food' do
   content_type :json
 
   @food = FatSecret.search_food(params[:food])
-  puts "----------"
-  puts @food
-  puts "----------"
   @food_id = @food["foods"]["food"].first["food_id"]
   @find_result = FatSecret.food(@food_id)
   food_name = params[:food]
@@ -32,7 +29,6 @@ post '/add_food' do
   day = List.find_by(list_name: params[:day])
   food = day.foods.create!(food_name: food_name, calories: calories)
   day.save
-  # require 'pry'; binding.pry 
   {food_name: food_name, calories: calories, day: day.list_name, food_id: food.id}.to_json
 end
 
