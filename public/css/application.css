@@ -1,0 +1,47 @@
+/*.container {
+	text-align: center;
+}
+*/
+
+ol {
+	list-style-type: none;
+}
+
+*{
+	padding-right: 15px;
+	padding-left: 15px;
+}
+
+p {
+	font-weight: bold;
+}
+
+.left-column {
+	float:left;
+	max-width: 39%;
+	padding-left: 70px;
+	padding-bottom: 10px;
+  border-style:  solid;
+  border-radius: 15px;
+}
+
+.right-column {
+	float:right;
+	max-width: 59%;
+	border-style:  solid;
+  border-radius: 15px;
+}
+
+.right-column h2 {
+	text-align: center;
+}
+
+.food-entry{
+	text-align: center;
+	margin: 20px 0px; 
+}
+
+#add-food-button select {
+	margin: 0px 15px;
+}
+

@@ -1,0 +1,101 @@
+<div class="food-entry">
+  <h1>Food Tracker</h1>
+  <form id="add-food-button" action="/add_food" method="post">
+    <input type="text"  name="food" placeholder="Enter a food item here!"/>
+    <select name="day">
+      <option value="0">Select Day of the Week</option>
+      <option value="Sunday">Sunday</option>
+      <option value="Monday">Monday</option>
+      <option value="Tuesday">Tuesday</option>
+      <option value="Wednesday">Wednesday</option>
+      <option value="Thursday">Thursday</option>
+      <option value="Friday">Friday</option>
+      <option value="Saturday">Saturday</option>
+    </select>
+    <input type="submit" value="Add Food Item"/>
+  </form>
+</div>
+
+<div class="left-column">
+  <div class="container" id="container-Sunday">
+    <h3>Sunday</h3>
+    <ol id="Sunday">
+      <% @sunday_food.each do |food| %>
+      <li data-food-id=<%= food.id %>><%=food.food_name.capitalize%> Calories: <%=food.calories%> <a href="#" class="delete">Delete</a></li>
+      <% end %>
+    </ol>
+    <p>Total Calories: <%= @sunday_count %></p>
+  </div>
+
+  <div class="container" id="container-Monday">
+    <h3>Monday</h3>
+    <ol id="Monday">
+      <% @monday_food.each do |food| %>
+      <li data-food-id=<%= food.id %>><%=food.food_name.capitalize%> Calories: <%=food.calories%> <a href="#" class="delete">Delete</a></li>
+      <% end %>
+    </ol>
+    <p>Total Calories: <%= @monday_count %></p>
+  </div>
+
+  <div class="container" id="container-Tuesday">
+    <h3>Tuesday</h3>
+    <ol id="Tuesday">
+      <% @tuesday_food.each do |food| %>
+      <li data-food-id=<%= food.id %>><%=food.food_name.capitalize%> Calories: <%=food.calories%> <a href="#" class="delete">Delete</a></li>
+      <% end %>
+    </ol>
+    <p>Total Calories: <%= @tuesday_count %> </p>
+  </div>
+
+  <div class="container" id="container-Wednesday">
+    <h3>Wednesday</h3>
+    <ol id="Wednesday">
+      <% @wednesday_food.each do |food| %>
+      <li data-food-id=<%= food.id %>><%=food.food_name.capitalize%> Calories: <%=food.calories%> <a href="#" class="delete">Delete</a></li>
+      <% end %>
+    </ol>
+    <p>Total Calories: <%= @wednesday_count %></p>
+  </div>
+
+  <div  class="container" id="container-Thursday">
+    <h3>Thursday</h3>
+    <ol id="Thursday">
+      <% @thursday_food.each do |food| %>
+      <li data-food-id=<%= food.id %>><%=food.food_name.capitalize%> Calories: <%=food.calories%> <a href="#" class="delete">Delete</a></li>
+      <% end %>
+    </ol>
+    <p>Total Calories: <%= @thursday_count %></p>
+  </div>
+
+  <div class="container" id="container-Friday">
+    <h3>Friday</h3>
+    <ol id="Friday">
+      <% @friday_food.each do |food| %>
+      <li data-food-id=<%= food.id %>><%=food.food_name.capitalize%> Calories: <%=food.calories%> <a href="#" class="delete">Delete</a></li>
+      <% end %>
+    </ol>
+    <p>Total Calories: <%= @friday_count %></p>
+  </div>
+
+  <div class="container" id="container-Saturday">
+    <h3>Saturday</h3>
+    <ol id="Saturday">
+      <% @saturday_food.each do |food| %>
+      <li data-food-id=<%= food.id %>><%=food.food_name.capitalize%> Calories: <%=food.calories%> <a href="#" class="delete">Delete</a></li>
+      <% end %>
+    </ol>
+    <p>Total Calories: <%= @saturday_count %></p>
+  </div>
+</div>
+
+<div class="right-column">
+  <h2>Calories Outlook for the Week<h2>
+  <canvas id="canvas" height="500" width="600"></canvas>
+</div>
+
+
+
+
+
+
+
