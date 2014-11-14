@@ -13,6 +13,12 @@
       <option value="Saturday">Saturday</option>
     </select>
     <input type="submit" value="Add Food Item"/>
+    </form>
+</div>
+
+<div id="reset-food">
+ <form action="/delete_all_food" method="post">
+    <input type="hidden" name="_method" value="delete"><input type="submit" value="Reset Food Tracker">
   </form>
 </div>
 
@@ -92,9 +98,6 @@
   <h2>Calories Outlook for the Week<h2>
   <canvas id="canvas" height="500" width="600"></canvas>
 </div>
-
-
-
 
 
 

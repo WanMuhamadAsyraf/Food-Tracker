@@ -40,4 +40,7 @@ delete '/add_food/:id' do
   {id: food.id, day: day, calories: calories}.to_json
 end 
 
-
+delete '/delete_all_food' do
+  Food.delete_all
+  redirect '/' 
+end 
