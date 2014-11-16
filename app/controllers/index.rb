@@ -28,7 +28,6 @@ post '/add_food' do
   calories =  @find_result["food"]["servings"]["serving"].first["calories"]
   day = List.find_by(list_name: params[:day])
   food = day.foods.create!(food_name: food_name, calories: calories)
-  day.save
   {food_name: food_name, calories: calories, day: day.list_name, food_id: food.id}.to_json
 end
 

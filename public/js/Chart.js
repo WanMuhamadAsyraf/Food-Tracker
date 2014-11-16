@@ -1,14 +1,3 @@
-/*!
- * Chart.js
- * http://chartjs.org/
- * Version: 1.0.1-beta.4
- *
- * Copyright 2014 Nick Downie
- * Released under the MIT license
- * https://github.com/nnnick/Chart.js/blob/master/LICENSE.md
- */
-
-
 (function(){
 
 	"use strict";
