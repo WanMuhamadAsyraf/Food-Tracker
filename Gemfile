@@ -1,8 +1,14 @@
-source :rubygems
-ruby "2.0.0"
+source 'https://rubygems.org/'
+ruby '2.2.0'
 
-# PostgreSQL driver
-gem 'pg'
+# group :production do
+  # PostgreSQL driver
+  gem 'pg'
+# end
+
+# group :development do
+#   gem 'sqlite3'
+# end
 
 # Sinatra driver
 gem 'sinatra'
@@ -15,6 +21,8 @@ gem 'fatsecret-api'
 
 gem 'activesupport'
 gem 'activerecord'
+
+gem 'rack', '1.5.2'
 
 gem 'rake'
 

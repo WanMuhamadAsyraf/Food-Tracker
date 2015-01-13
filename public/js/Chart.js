@@ -18,7 +18,7 @@
 		var height = this.height = context.canvas.height;
 		this.aspectRatio = this.width / this.height;
 		//High pixel density displays - multiply the size of the canvas height/width by the device pixel ratio, then scale.
-		helpers.retinaScale(this);
+		//helpers.retinaScale(this);
 
 		return this;
 	};

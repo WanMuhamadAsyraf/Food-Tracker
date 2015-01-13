@@ -22,7 +22,7 @@ var Server = (function(){
    evt.preventDefault();
    var id = $(this).closest('li').data('foodId');
    $.ajax({
-    url: '/add_food/' + id, 
+    url: '/add_food/' + id,
     type: 'DELETE'
   }).done(View.removeViewData).fail(function(){alert("Item Not Found!")});
  };
@@ -37,14 +37,14 @@ var View = (function(){
 
   String.prototype.capitalize = function() {
     return this.charAt(0).toUpperCase() + this.slice(1);
-  }    
+  }
 
   function addViewData(res){
     var link = $('<a>').addClass('delete').text('Delete').on('click', Server.removeItem)
     var newLi = $('<li>')
     .data('foodId', res.food_id)
     .text(res.food_name.capitalize() + ' Calories: ' + res.calories + '  ')
-    .append(link); 
+    .append(link);
     $("#" + res.day).append(newLi);
 
     var parseCalTotal = $("#" + "container-" + res.day).find("p").text();
@@ -96,5 +96,13 @@ function chart(){
     ]
   };
 
-  var myLine = new Chart(document.getElementById("canvas").getContext("2d")).Bar(barChartData);
+  var canvas = document.getElementById("canvas"),
+      ctx = canvas.getContext('2d');
+
+  // ctx.save();
+  // ctx.setTransform(1, 0, 0, 1, 0, 0);
+  // ctx.clearRect(0, 0, canvas.width, canvas.height);
+  // ctx.restore();
+
+  var myLine = new Chart(ctx).Bar(barChartData);
 }
