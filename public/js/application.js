@@ -96,13 +96,15 @@ function chart(){
     ]
   };
 
-  var canvas = document.getElementById("canvas"),
-      ctx = canvas.getContext('2d');
-
-  // ctx.save();
-  // ctx.setTransform(1, 0, 0, 1, 0, 0);
-  // ctx.clearRect(0, 0, canvas.width, canvas.height);
-  // ctx.restore();
-
-  var myLine = new Chart(ctx).Bar(barChartData);
+  $('#canvas').remove(); // this is my <canvas> element
+  $('.right-column').append('<canvas id="canvas"><canvas>');
+  ctx = document.getElementById("canvas").getContext("2d");
+  ctx.canvas.width = 550;
+  ctx.canvas.height = 400;
+  myLine = new Chart(ctx).Bar(barChartData);
+  // var canvas = document.getElementById("canvas"),
+  //     ctx = canvas.getContext('2d');
+  // var myLine = new Chart(ctx).Bar(barChartData);
 }
+
+

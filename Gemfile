@@ -1,5 +1,5 @@
 source 'https://rubygems.org/'
-ruby '2.2.0'
+ruby '2.0.0'
 
 # group :production do
   # PostgreSQL driver
@@ -22,7 +22,7 @@ gem 'fatsecret-api'
 gem 'activesupport'
 gem 'activerecord'
 
-gem 'rack', '1.5.2'
+gem 'rack', '1.6.0'
 
 gem 'rake'
 
