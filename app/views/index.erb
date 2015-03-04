@@ -1,7 +1,8 @@
 <div class="food-entry">
   <h1>Food Tracker</h1>
+  <h4>A simple calorie counter App using FatSecret Api and Chart.js</h4>
   <form id="add-food-button" action="/add_food" method="post">
-    <input type="text"  name="food" placeholder="Enter a food item here!"/>
+    <input type="text"  name="food" placeholder="e.g. cake"/>
     <select name="day">
       <option value="0">Select Day of the Week</option>
       <option value="Sunday">Sunday</option>
@@ -12,13 +13,13 @@
       <option value="Friday">Friday</option>
       <option value="Saturday">Saturday</option>
     </select>
-    <input type="submit" value="Add Food Item"/>
+    <input type="submit"   class="btn btn-success" value="Add Food Item"/>
     </form>
 </div>
 
 <div id="reset-food">
  <form action="/delete_all_food" method="post">
-    <input type="hidden" name="_method" value="delete"><input type="submit" value="Reset Food Tracker">
+    <input type="hidden" name="_method" value="delete"><input type="submit" class="btn btn-danger" value="Reset Food Tracker">
   </form>
 </div>
 

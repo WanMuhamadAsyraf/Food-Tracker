@@ -11,6 +11,10 @@ p {
 	font-weight: bold;
 }
 
+ .container a:hover{
+    text-decoration: none;
+}
+
 .left-column {
 	float:left;
 	max-width: 39%;
@@ -18,7 +22,7 @@ p {
 	padding-bottom: 10px;
   border-style:  solid;
   border-radius: 15px;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
 }
 
 .right-column {
@@ -50,4 +54,5 @@ p {
 .food-entry h1{
 	padding-bottom: 10px;
 }
+
 
