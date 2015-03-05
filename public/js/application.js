@@ -52,6 +52,7 @@ var View = (function(){
     var number = parseInt(num) + parseInt(res.calories)
     $("#" + "container-" + res.day).find("p").text("Total Calories: " + number);
     chart();
+    $('#submit-box').val('');
   }
 
   function removeViewData(res){
