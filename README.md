@@ -1,4 +1,6 @@
 Food-Tracker
 ============
 
-A calorie counter app using FatSecret API and Chart.js
+A simple calorie counter App using FatSecret Api and Chart.js
+
+Recommend to use simple food examples e.g. cake, steak, pizza, pie, apple...

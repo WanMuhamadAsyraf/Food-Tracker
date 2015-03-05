@@ -1,5 +1,5 @@
-ol {
-	list-style-type: none;
+ol li {
+	margin-left: 3em;
 }
 
 *{
