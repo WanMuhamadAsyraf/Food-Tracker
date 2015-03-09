@@ -14,7 +14,6 @@ get '/' do
   @thursday_count = @thursday_food.empty? ? 0 : @thursday_food.map {|food| food.calories}.reduce(:+)
   @friday_count = @friday_food.empty? ? 0 : @friday_food.map {|food| food.calories}.reduce(:+)
   @saturday_count = @saturday_food.empty? ? 0 : @saturday_food.map {|food| food.calories}.reduce(:+)
-
   erb :index
 end
 
@@ -34,12 +33,12 @@ end
 delete '/add_food/:id' do
   food = Food.find(params[:id])
   calories = food.calories
-  day = food.list.list_name 
+  day = food.list.list_name
   food.destroy
   {id: food.id, day: day, calories: calories}.to_json
-end 
+end
 
 delete '/delete_all_food' do
   Food.delete_all
-  redirect '/' 
-end 
+  redirect '/'
+end
